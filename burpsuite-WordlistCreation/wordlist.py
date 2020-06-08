@@ -14,7 +14,7 @@ def findSubDirs():
         lines = i.readlines()
     
     for i in range(len(lines)):
-        lines[i] stripIt(lines[i]) #strip out directories
+        lines[i] = stripIt(lines[i]) #strip out directories
     separatedListUnsorted = []
     for i in range(len(lines)):
         for j in range(len(lines[i])):  #pull out strings from total list
@@ -37,7 +37,7 @@ def startup():
     elif len(sys.argv) == 2:
         print("must provide output filename")
     elif len(sys.argv) == 3:
-        findSubDirs():
+        findSubDirs()
     else:
         sys.exit()
 
