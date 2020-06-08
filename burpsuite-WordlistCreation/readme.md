@@ -11,7 +11,7 @@ filter in burp (optional, but cleaner):
 python wordlist.py infile outfile
 
 
-Todo:
+# Todo:
 - params wordlist
 - filename wordlist
 - create a burp plugin for this
