@@ -9,7 +9,7 @@ def stripIt(unmodified):
     return removeHTTP
 
 def findSubDirs():
-    inFile = sys.argv[1]    #get our unedited list of ursl
+    inFile = sys.argv[1]    #get our unedited list of urls
     with open(inFile, 'r') as i:    #create a new list of all these urls
         lines = i.readlines()
     
