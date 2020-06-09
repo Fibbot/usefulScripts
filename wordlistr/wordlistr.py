@@ -26,7 +26,7 @@ def findSubDirs(lines):
 
     with open(outFile, 'w') as out:
         for line in separatedList:
-            if '&' in line or '?' in line or ':' in line or '.' in line:    #only want directories, not filenames or params
+            if '&' in line or '?' in line or ':' in line or '.' in line or '=' in line:    #only want directories, not filenames or params
                 pass
             else:
                 out.write(line + "\n")
