@@ -1,4 +1,6 @@
 import sys
+import urllib.parse as urlparse
+from urllib.parse import parse_qs
 
 def uniqthis(fileName): #sort/uniq input
     my_list = sorted(set(fileName))
@@ -42,13 +44,28 @@ def findFileNames(lines):
             else:
                 fileList.append(testFile)
     outFile = sys.argv[2] + "-fileNames"
-    uniqthis(fileList) #not working for some reason yet
+    fileList2 = sorted(set(fileList))
+    fileList = list(fileList2)
     with open(outFile, 'w') as out:
         for line in fileList:
             if "\n" in line:    #not sure why, some contain newlines.. some don't.. janky workaround
                 out.write(line)
             else:
                 out.write(line + "\n")
+
+def findParams(lines):
+    paramList = []
+    for i in lines:
+        parsed = urlparse.urlparse(i)
+        if len(parse_qs(parsed.query)) > 0:
+            for key, value in parse_qs(parsed.query).items():
+                paramList.append(key)
+    outFile = sys.argv[2] + "-paramNames"
+    paramList2 = sorted(set(paramList))
+    paramList = list(paramList2)
+    with open(outFile, 'w') as out:
+        for line in paramList:
+            out.write(line + "\n")
 
 def startup():
     if len(sys.argv) == 1:
@@ -61,8 +78,11 @@ def startup():
             lines = i.readlines()
         with open(inFile, 'r') as i:
             lines2 = i.readlines()
+        with open(inFile, 'r') as i:
+            lines3 = i.readlines()
         findSubDirs(lines)
         findFileNames(lines2)
+        findParams(lines3)
     else:
         sys.exit()
 
