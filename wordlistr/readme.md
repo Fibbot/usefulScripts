@@ -8,7 +8,7 @@ filter in burp (optional, but cleaner):
 
 # how to run:
 
-python3 wordlist.py infile outfileName
+python3 wordlistr.py infile outfileName
 
 
 # Todo:
