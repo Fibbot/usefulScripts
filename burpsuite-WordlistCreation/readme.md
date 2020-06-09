@@ -8,10 +8,8 @@ filter in burp (optional, but cleaner):
 
 # how to run:
 
-python3 wordlist.py infile outfile
+python3 wordlist.py infile outfileName
 
 
 # Todo:
-- params wordlist
-- filename wordlist
 - create a burp plugin for this
