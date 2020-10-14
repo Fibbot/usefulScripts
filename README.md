@@ -10,3 +10,7 @@ stuff i've found to be useful in pentesting or bug bounties
 - i know this can be done faster, but i've had the issue of being blocked (429 error) by cloudflare and the like when running too fast
 # simpleSUID
 - usually used when we've been able to get root on a box and want a quick/easy way to re-root
+# permCheck
+- finding folder permissions, usually on a giant nfs
+# azureLoot
+- quick checking azure client tokens
