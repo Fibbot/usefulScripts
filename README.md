@@ -1,7 +1,5 @@
 stuff i've found to be useful in pentesting or bug bounties
 
-# wordlistr
-- extract directories, params, and filenames from burpsuite proxy history
 # slowCurlAnnoyingDomains
 - when using amass/massdns sometimes you'll get a massive list of domains that all redirect to the same site like:
 - '1.abc.com, 2.abc.com, stupid.abc.com' --> abc.com
