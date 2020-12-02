@@ -12,3 +12,7 @@ stuff i've found to be useful in pentesting or bug bounties
 - finding folder permissions, usually on a giant nfs
 # azureLoot
 - quick checking azure client tokens
+# gitAllGroupProjects
+- find all projects from a group in a gitlab
+# recon.sh
+- quick n dirty subdomain enumeration + portscan + site screenshot
