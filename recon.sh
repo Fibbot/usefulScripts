@@ -31,6 +31,6 @@ httpx -l total-subdomains -title -status-code -silent -no-color -json -o httpxRe
 cat  httpxResults | grep -v 404 | grep -v 500| tee -a aliveDomains
 cat aliveDomains | jq -r .url | tee aliveDomainsURL
 cat aliveDomainsURL | sed -e 's/^http:\/\///g' -e 's/^https:\/\///g' | tee aliveDomainsNoHTTP
-naabu -silent -rate 500 -hL aliveDomainsNoHTTP -json -o portScan
+naabu -silent -rate 500 -ports full -hL aliveDomainsNoHTTP -json -o portScan
 mkdir aquatone && cd $_
 cat ../aliveDomainsURL | aquatone
